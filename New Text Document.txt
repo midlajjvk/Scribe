@@ -9,12 +9,12 @@ the twilio inserted but have to buy a number in twilio to sent messages that can
                 try:
                     message = twilio_client.messages.create(
                         body=f"✅ Hi {name}, your booking is confirmed on {selected_date} at {time}. Thank you!",
-                        from_="+919072515306",
+                        from_="+91",
                         to=f"+91{phone}"  # modify country code as needed
                     )
                     print("SMS sent successfully, SID:", message.sid)
 
-here the from numbet must be the number that brought from twilio
+here the from number must be the number that brought from twilio
 
 ---------------------------------------------------------
 
