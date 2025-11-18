@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GlowUp Salon</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='images/SCRIBE.png') }}" alt="SCRIBE Logo" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('book') }}">Book a Slot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('admin_bookings') }}">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="{{ url_for('static', filename='videos/saloon.mp4') }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-text">
+      <h1 class="display-4">SCRIBE</h1>
+      <h2 class="subheading">Gents Beauty Parlour</h2>
+      <p class="lead">Your Style, Our Passion</p>
+      <a href="{{ url_for('book') }}" class="btn btn-warning btn-lg mt-3">Book Now</a>
+    </div>
+  </section>
+
+
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="container py-5">
+    <h2 class="text-center mb-5">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4 col-sm-6 text-center">
+        <img src="../static/images/haircut.jpg" class="service-img mb-3" alt="Haircut">
+        <h5>Hair Cutting</h5>
+        <p>Professional haircuts for men, tailored to your style.</p>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center">
+        <img src="../static/images/beardshave.webp" class="service-img mb-3" alt="Shaving">
+        <h5>Shaving</h5>
+        <p>Clean, precise shaving services to keep you looking sharp.</p>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center">
+        <img src="../static/images/facialtraet.jpg" class="service-img mb-3" alt="Facial">
+        <h5>Facial Treatments</h5>
+        <p>Relaxing facial treatments to rejuvenate and refresh your skin.</p>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center">
+        <img src="../static/images/haircolor.jpg" class="service-img mb-3" alt="Hair Coloring">
+        <h5>Hair Coloring</h5>
+        <p>Professional hair coloring to match your style and personality.</p>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center">
+        <img src="../static/images/beardgrooming.jpg" class="service-img mb-3" alt="Beard Grooming">
+        <h5>Beard Grooming</h5>
+        <p>Maintain and style your beard with our expert grooming services.</p>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center">
+        <img src="../static/images/hairwash.jpg" class="service-img mb-3" alt="Massage">
+        <h5>Hair Wash & Blow-dry</h5>
+        <p>Stress-relieving massages to help you unwind and feel refreshed.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Book Now CTA Section -->
+<section class="text-center py-5 cta-section text-white">
+  <h3>Ready to Look Your Best?</h3>
+  <p>Book your slot now and experience the ultimate salon treatment.</p>
+  <a href="{{ url_for('book') }}" class="btn custom-btn btn-lg mt-3">Book Now</a>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 GlowUp Salon. All Rights Reserved.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+/* success.css - Black & Gold Theme with Background Color */
+
+/* Body background */
+body {
+    background-color: #000000; /* Solid black background */
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container styling */
+.confirmation-container {
+    background-color: rgba(26, 26, 26, 0.95); /* Slightly transparent dark container */
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3); /* Gold shadow */
+    max-width: 500px;
+    text-align: center;
+    color: #FFD700; /* Gold text */
+}
+
+/* Success heading */
+.confirmation-container h1 {
+    font-size: 3rem;
+    color: #FFD700; /* Gold color */
+    margin-bottom: 20px;
+    animation: pop 0.8s ease forwards;
+}
+
+/* Pop animation for heading */
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Paragraph */
+.confirmation-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #FFD700; /* Gold text */
+}
+
+/* Button */
+.confirmation-container .btn {
+    background-color: #FFD700; /* Gold button */
+    color: #000;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.confirmation-container .btn:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+    transform: scale(1.05);
+}
+
+/* Animate the button on load */
+.confirmation-container .btn {
+    animation: slideUp 0.8s ease forwards 0.5s;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* --------------------- */
+/* Responsive for screens <798px */
+@media (max-width: 798px) {
+    .confirmation-container {
+        padding: 30px 20px;
+        max-width: 90%;
+        margin: 50px auto;
+    }
+
+    .confirmation-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .confirmation-container p {
+        font-size: 1rem;
+    }
+
+    .confirmation-container .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}

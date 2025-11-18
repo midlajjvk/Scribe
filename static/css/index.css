@@ -1,0 +1,223 @@
+/* Body Background */
+body {
+    background: url('../images/bgimg.avif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Optional: Add semi-transparent overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(88, 76, 76, 0.85);
+    /* white overlay */
+    z-index: -1;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 70vh;
+    /* height of the hero section */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    /* moves text down */
+    justify-content: center;
+    padding-bottom: 40px;
+    text-align: center;
+    color: white;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    /* ensures video covers entire hero section */
+    z-index: -1;
+    /* behind text */
+}
+
+
+/* Hero Section Text */
+.hero-text h1 {
+    font-family: 'Impact', 'Courier New', Courier, monospace;
+    /* change to any font you like */
+    color: #fffdf2;
+    /* gold color for SCRIBE */
+    letter-spacing: 8px;
+    /* spacing between letters */
+    font-weight: 900;
+    font-size: 6rem;
+}
+
+.hero-text h2.subheading {
+    font-family: 'Roboto', sans-serif;
+    /* clean modern font */
+    color: #FFFFFF;
+    /* white or any color that contrasts the background */
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 0.2rem;
+}
+
+.hero-text p.lead {
+    font-family: 'Open Sans', sans-serif;
+    /* easy-to-read font for paragraph */
+    color: #f0f0f0;
+    /* slightly off-white */
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #000000; /* Black background */
+    color: #FFD700;            /* Gold text */
+}
+
+/* Custom Button */
+.custom-btn {
+    background-color: #FFD700; /* Gold */
+    color: #000;               /* Black text */
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+    transform: scale(1.05);
+    color: #000;
+}
+
+
+
+/* Make subheading match the width of the main heading */
+.hero-text h1.subheading {
+    font-size: 1.5rem;
+    display: inline-block;
+    /* shrink to content width */
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    font-size: 1.5rem;
+    /* smaller than main heading */
+    letter-spacing: 2px;
+}
+/* Services Section Heading */
+#services h2 {
+    color: #FFD700;  /* gold color */
+    font-weight: 600; /* optional: make it slightly bold */
+    text-transform: uppercase; /* optional: make text uppercase */
+}
+
+
+
+/* Service Images */
+.service-img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50px;
+    transition: transform 0.50s;
+}
+
+.service-img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(34, 34, 34, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Services Section Text Colors */
+#services h5 {
+    color: #ffffff;
+    /* Change this to any color you like for service titles */
+}
+
+#services p {
+    color: #ffffff;
+    /* Change this to any color you like for service descriptions */
+}
+
+
+/* Keep navbar height fixed */
+.navbar {
+    height: 70px;
+    /* adjust as needed */
+}
+
+/* Scale logo image without affecting navbar height */
+.navbar-logo {
+    height: 100%;
+    /* make it fill navbar height */
+    max-height: 100px;
+    /* prevents it from getting too tall */
+    width: auto;
+    /* maintain aspect ratio */
+}
+
+/* Navbar link color */
+.navbar-nav .nav-link {
+    color: #FFD700;
+    /* gold color, change to any color you like */
+    font-weight: 500;
+    /* optional: make text slightly bolder */
+    transition: color 0.3s;
+    /* smooth color change on hover */
+}
+
+/* Change color on hover */
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+    /* white on hover, change as needed */
+}
+
+
+
+/* Mobile responsiveness for screens < 768px */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+        /* smaller heading on mobile */
+        letter-spacing: 4px;
+    }
+
+    .hero-text h2.subheading {
+        font-size: 1.2rem;
+    }
+
+    .hero-text p.lead {
+        font-size: 1rem;
+    }
+
+    .service-img {
+        height: auto;
+        /* let image scale */
+        max-width: 90%;
+        /* fit smaller screens */
+    }
+
+    .hero {
+        padding-bottom: 20px;
+        align-items: center;
+    }
+}
+

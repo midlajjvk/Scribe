@@ -1,0 +1,83 @@
+/* admin_login.css */
+
+/* Body background and font */
+body {
+    background-color: #1c1c1c; /* Dark background */
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card container */
+.admin-card {
+    background-color: rgba(40, 40, 40, 0.95); /* Slightly transparent dark card */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    width: 350px;
+    text-align: center;
+}
+
+/* Heading */
+.admin-card h3 {
+    font-family: 'Impact', 'Courier New', Courier, monospace;
+    color: #FFD700; /* Gold color */
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+/* Input fields */
+.admin-card input.form-control {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Input focus effect */
+.admin-card input.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 10px #FFD700;
+}
+
+/* Login button */
+.admin-card .btn-login {
+    background-color: #FFD700;
+    color: #000;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.admin-card .btn-login:hover {
+    background-color: #e6c200;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Alert messages */
+.admin-card .alert {
+    font-weight: 500;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .admin-card {
+        padding: 25px 20px;
+        width: 90%;
+    }
+
+    .admin-card h3 {
+        font-size: 1.8rem;
+    }
+}
